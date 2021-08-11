@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+     function checkName(){
+
+var data = document.getElementById('fname').value;
+if(data.length > 5){
+//    document.getElementById('info').innerHTML = data;
+alert("Accepted");
+
+}else{
+    alert("Length of username should be greater than 5");
+}
+}
+
+function checkPass(){
+    var pa = document.getElementById('pass').value;
+if(pa.length > 6 && pa.length < 11) {
+   //document.getElementById('info').innerHTML = data;
+   alert("Accepted");
+
+}else{
+    alert("Length of password should be greater than 6 and less than 11");
+    
+}
+}
+
+function checkemail(){
+    var e = document.getElementById('pass').value;
+    
+    if(e.includes('@')){
+        alert("Accepted");
+    } else{
+        alert("Include @");
+    }
+}
+
+
+</script>
+
+</head>
+<body>
+    <form>
+        <label for="fname">User name:</label><br>
+        <input type="text" id="fname" name="fname" required="true">
+        <input type ='button' value ='check UserName' onclick='checkName()'/><br>
+        <label for="p">password name:</label><br>
+        <input type="password" id="pass" name="pass" required="true">
+        <input type ='button' value ='check password' onclick='checkPass()'/><br>
+        <label for="em">email id:</label><br>
+        <input type="email" id="email" name="email" required="true">
+        <input type ='button' value ='check email' onclick='checkemail()'/><br>
+
+
+        <input type="submit">
+      </form>
+</body>
+</html>

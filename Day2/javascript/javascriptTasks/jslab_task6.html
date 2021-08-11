@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function viewProduct(){
+         
+            document.getElementById('product').innerHTML = "<p style = 'font-size : 20;color:green'>Brand:Parker Pen <br> Type:Pilot Pen <br> Price :Rs 999</p>";
+        }
+        function hideProduct(){
+            document.getElementById('product').innerHTML ="<p > Pen <br> Hover over this block to see Pen (product) details</p>";
+		}
+        
+            function price(){
+			document.getElementById('showtext').innerHTML= "Discount price is:Rs " + parseInt(document.getElementById('mytext').value)*0.05
+		}
+        
+
+    </script>
+</head>
+<body>
+
+    <div id = "product" style="background-color:pink;width: 200px;height: 100px;" onmouseover="viewProduct()" onmouseout="hideProduct()">
+        Pen <br>
+        Hover over this block to see Pen (product) details
+    </div>
+
+ 
+
+
+    Enter Price
+    <input type ="text" id = "mytext" onkeydown="price()">
+    <p id ="showtext"></p>
+</body>
+</html>

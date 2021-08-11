@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var pat1 = new RegExp("https","g");
+        var pat2 = new RegExp(".org","g");
+        var str = "https://www.imsnsit.oirg";
+         
+        if(str.substring(0,5).match(pat1)==null){
+           document.write("https is not present at start");
+           document.write("<br>");
+        }else{
+            document.write("https is present at start");
+           document.write("<br>");
+
+        }
+
+        if(str.substring(str.length - 5,str.length).match(pat2)==null){
+           document.write(".org is not present at end");
+           document.write("<br>");
+
+        }else{
+            document.write(".org is present at end");
+            document.write("<br>");
+      
+        }
+
+            // var a= /.{5}[b][c]/;
+            // // var cond1 =/b+/;
+            // // var cond2 = /c+/;
+            // var string ="moh"
+            var cond1=/.{5}/;
+            var cond2=/b+c+/
+
+            var str1 = "abaabbccdef";
+
+
+            if(str1.match(cond1) && str1.match(cond2)){
+                document.write("Match found");
+            }else{
+                document.write("Match not found");
+            }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

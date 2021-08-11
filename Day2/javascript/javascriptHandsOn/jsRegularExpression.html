@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var pat = new RegExp("Hello World","g");
+         var patt = /Hello World/g;
+         var str = "Welcome to programming";
+        // document.write(str.match(patt));
+
+         if(str.match(patt)==null){
+               document.write("Match not found");      
+         }else{
+             document.write("Match found");
+         }
+         
+        document.write("<br>");
+        // Meta Characters 
+        var pat1 = /.../;
+        var pat2 =/..\w.t/
+        var pat3 =/a+.../
+        var string = "abb"
+        if(string.match(pat3)==null){
+               document.write("Match not found");      
+         }else{
+             document.write("Match found");
+         }
+        document.write("<br>");
+
+          var patt = /^hay/
+         function matchText(){
+             var nstring = document.getElementById('myString').value;
+             if(nstring.match(patt) ==null){
+                 document.getElementById("result").innerHTML ="Not Matched";
+             }else{
+                document.getElementById("result").innerHTML ="Matched";
+             }
+         }
+
+    </script>
+</head>
+<body>
+    Enter text
+    <input type ='text' id ='myString'>
+    <input type='submit' value='match' onclick="matchText()" id ='mytext'>
+    <p id ='result'>
+
+    </p>
+</body>
+</html>

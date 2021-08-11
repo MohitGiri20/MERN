@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <script>
+     var num1 = 10;
+     var num2 = 100;
+
+     if(num1>num2){
+         document.write(num1);
+     }else{
+         document.write(num2);
+     }
+     document.write("<br>");
+
+     document.write( num1 > num2 ? num1 : num2);
+     document.write("<br>");
+    
+     num1 > num2 ? document.write(num1) : document.write(num2);
+     
+
+     // switch 
+    
+     var color = "RED";
+     switch(color){
+        case "RED":
+            {
+                document.write("<p style = 'background-color:red'>Red Background</p>")
+                break;
+            } 
+        default:
+            {
+                document.write("No color");
+            }
+
+     }
+
+     // For loop
+     document.write("<br>");
+     document.write("<select>");
+     for(i=0;i<15;i++){
+         document.write("<option>"); 
+         document.write(i);
+         document.write("</option>");
+     }
+
+     // while loop
+    //  var j=0;
+    //  while(j<10){
+    //   document.write("<div style = 'background-color : pink; width : 100px; height:100px'>"+j+"</div>");
+    //   j++;  
+    // }
+
+    // for each
+
+    var cars = ["Audi","MS","Mercedes","BMW","Porsche","Audi"];
+    
+    for(car in cars){
+        document.write("<p>")
+            document.write(cars[car])
+            document.write("</p>")
+    }
+
+
+ </script>
+
+</head>
+<body>
+    
+</body>
+</html>

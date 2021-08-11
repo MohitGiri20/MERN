@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<scr>, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External Script  -->
+    <!-- <script src = "external.js"></script> -->
+
+    <script>
+        // Inline Script
+      //  alert("Java Script")
+
+      // Composite Data Types
+       // Object 
+      order = {ProductName : "Pen", Price : 20, Quantity : 10};
+
+        document.write(order);
+        document.write("<br>")
+        document.write("Product Name: " + order.ProductName);
+        document.write("<br>")
+        document.write("Product Price" + order.Price);
+        document.write("<br>")
+        document.write("Product Quantity" + order.Quantity);
+        document.write("<br>")
+        
+        order.category = "stationary";
+        document.write("Product Category" + order.category);
+        document.write("<br>")
+
+
+        // Arrays
+        var cars = ["Audi","MS","Mercedes","BMW","Porsche","Audi"];
+        document.write(cars);
+        document.write("<br>")
+        document.write(cars[2]);
+        document.write("<br>")
+        document.write(cars.length);
+        document.write("<br>")
+        cars.push("Hyundai")
+        document.write(cars);
+        document.write("<br>")
+        document.write(cars.pop());
+        document.write("<br>")
+        document.write(cars.sort());
+        document.write("<br>")
+        document.write(cars.reverse());
+        document.write("<br>")
+       
+
+        // Functions
+        function printMessage(){
+            document.write("Hello Ji");
+        }
+
+        function calc(a,b){
+            return a+b;
+        }
+
+        // Function creation by storing in variables
+        var func = function(a,b){
+            return a-b;
+        }
+        // Passing function as a parameter to another function
+
+        function calcfunction(func){
+            document.write(func((10.30,5.67)));
+        }
+
+
+        printMessage();
+        document.write("<br>");
+        document.write(calc(5,10));
+        document.write("<br>");
+        document.write(func(5,10));
+        document.write("<br>");
+        calcfunction(func);
+
+    </script>
+</head>
+<body>
+    <!-- Internal Script is applied over body -->
+   
+</body>
+</html>

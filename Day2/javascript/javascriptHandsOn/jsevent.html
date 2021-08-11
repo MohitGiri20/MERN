@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function viewOffer(){
+        document.getElementById('offerbox').innerHTML = "<p style = 'font-size : 20;color:green'>50%discount on purchase</p>";
+    }
+
+    function removeOffer(){
+        document.getElementById('offerbox').innerHTML = "<p id ='p' style= 'font-size: 30;color:black'>Move mouse to this block to see offer</p>"; 
+    }
+</script>
+
+</head>
+<body>
+    <div id = 'offerbox' style='background-color: pink;width: 200px; height: 200px;' onmouseover="viewOffer()"  onmouseout="removeOffer()">
+    <p id ='p' style= 'font-size: 30;color:black'>Move mouse to this block to see offer</p>
+    </div>
+
+</body>
+</html>

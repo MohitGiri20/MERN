@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+
+        function si(p,r,t){
+            return (p*r*t)/100;
+        }
+        var emparr=[]
+        employee = {employeeName : "Mohan", department : "finance", designation : "Manager",salary : 100000};
+        
+        function pushObject(){
+            emparr.push(employee);
+        }
+        function display(emparr){
+        document.write("Employee Name: " + emparr[0].employeeName);
+        document.write("<br>")
+        document.write("Department: " + emparr[0].department);
+        document.write("<br>")
+        document.write("Designation: " + emparr[0].designation);
+        document.write("<br>")
+        document.write("Salary: " + emparr[0].salary);
+        document.write("<br>")
+        
+        }
+
+        
+        
+
+
+        
+        document.write("<br>");
+        document.write(si(40000,10,5));
+        document.write("<br>");
+        pushObject();
+        document.write("<br>");
+        display(emparr);
+    </script>
+</head>
+<body>
+ 
+</body>
+</html>

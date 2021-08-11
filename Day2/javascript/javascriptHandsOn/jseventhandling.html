@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func(){
+            alert("Hello is clicked");
+        }
+
+        function pageonLoad(){
+            alert("Page is loaded");
+        }
+        
+        function viewChange(){
+            alert("option changed")
+        }
+
+        function checkName(){
+
+            var data = document.getElementById('name').value;
+            if(data.length > 3){
+               document.getElementById('info').innerHTML = data;
+            }else{
+                document.write("Invalid user name");
+            }
+        }
+
+    </script>
+</head>
+<body onload="pageonLoad()">
+    <select onchange="viewChange()">
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+    <input type = 'button' onclick='func()' value ='say hello'/>
+     <br>
+     Enter name <input type = 'text' id = 'name'/> <br>
+     <input type ='button' value ='check Name' onclick='checkName()'/>
+      <p id ='info'></p>
+</body>
+</html>

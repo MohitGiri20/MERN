@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<scr>, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External Script  -->
+    <!-- <script src = "external.js"></script> -->
+
+    <script>
+        // Inline Script
+      //  alert("Java Script")
+        var num = "Hello World"; 
+        document.write(num[2]);
+        document.write("<br>")
+        document.write(num.charAt(2));
+        document.write("<br>");
+        document.write(num.charCodeAt(2));
+        document.write("<br>")
+        document.write(num.concat(" Ji")); 
+        document.write("<br>");
+        document.write(num.endsWith("ld"));
+
+        document.write("<br>");
+        var cars = "Audi,MS,Mercedes,BMW,Porsche,Audi";
+        var List = cars.split(",");
+        document.write(List);
+       document.write("<br>");
+        document.write(cars.search("Audi"));
+
+        // Replace 
+        document.write(cars.replace("MS","Hyundai"));
+        document.write("<br>");
+        // Repeat function
+        document.write(cars.repeat(4));    
+        // Last Occurrence of same element
+        document.write("<br>");
+        document.write(cars.indexOf("Audi"));
+        document.write("<br>");
+        document.write(cars.lastIndexOf("Audi"));
+        </script>
+</head>
+<body>
+    <!-- Internal Script is applied over body -->
+   
+</body>
+</html>
