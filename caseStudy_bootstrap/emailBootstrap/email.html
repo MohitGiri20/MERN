@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/c56f6310ac.js"></script>
+    <title>email Webpage</title>
+  
+
+</head>
+<body>
+    <div class="container">
+
+      <h1 style="color: red;"><em>email Webpage</em></h1>  
+   
+      <div class="col-lg-12  bg-dark text-white rounded">
+        <h3>New Message</h3>
+        </div>
+      <form action="success.html">
+        <div class="form-group">
+        <input type="email" required = true class="form-control"   placeholder="To">
+        <input type="email" class="form-control"  placeholder="cc">
+        <input type="email" class="form-control"  placeholder="bcc">
+        <input type="text" required=true class="form-control"   placeholder="Subject">
+        <textarea class="form-control" required=true rows="6"></textarea>
+        
+        <label >
+          <i class="fa fa-paperclip" ></i>
+        </label>
+        <input type="file"  id ='attachment' class="form-control-file" >
+
+        <div class="co-lg-12 ">
+          
+          
+          <button  type="submit"  class="btn btn-primary btn-sm">Send<i class="fa fa-paper-plane" ></i></button>
+
+         
+          <span class="pull-right">
+            <a href="#" onClick="window.location.reload()" id="cancel" name="cancel" class="btn btn-primary btn-sm pl-3 pr-3"><i class="fa fa-trash-o" ></i></a>
+            
+          </span>
+          </div>
+        
+        </div>
+        </form>
+
+
+
+    </div>
+</body>
+</html>
