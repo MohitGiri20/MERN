@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: pink;
+            width: 100px;
+            height:100px;
+        }
+    </style>
+
+    <script>
+        // function getElementId(){
+        //    var data = document.getElementById('para').innerHTML;
+        //    alert(data);
+        // }
+
+        // function getElementTag(){
+        //    var data = document.getElementsByTagName('p').innerHTML;
+        //    var val = data[0].innerHTML;
+        //    alert(val);
+        // }
+        function getElementClass(){
+           var data = document.getElementsByClassName('box');
+           var val = data[0].innerHTML;
+           alert(val);
+           var elements = document.getElementsByTagName('p');
+           for(i=0;i<2;i++){
+               elements[i].innerHTML = 'Script';
+           }
+        }
+
+
+    </script>
+</head>
+<body>
+    <p id = 'para' class="box" onclick="getElementClass()">Paragraph</p>
+</body>
+</html>

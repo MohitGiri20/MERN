@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+         function addTag(){
+
+            var body = document.getElementsByTagName('body')
+            var di = document.createElement('div');
+            var para1 = document.createElement('p');
+             var textNode1 = document.createTextNode("Paragraph Text1") 
+             para1.appendChild(textNode1);
+             var para2 = document.createElement('p');
+             var textNode2 = document.createTextNode("Paragraph Text2")
+             para2.appendChild(textNode2);
+
+             var h = document.createElement('h1');
+			var textNode3 =document.createTextNode('heading')
+			h.appendChild(textNode3)
+             di.style.backgroundColor="pink"
+			di.style.border="groove"
+            
+            
+            body[0].appendChild(di)		
+			 di.appendChild(h)
+             di.appendChild(para1)
+             di.appendChild(para2)
+             
+            
+             
+            
+           
+
+      
+            }
+        </script>
+</head>
+<body>
+    <input type = 'button' value = 'Add Elements' onclick="addTag()">
+    
+</body>
+</html>

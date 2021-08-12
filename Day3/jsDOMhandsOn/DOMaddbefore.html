@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addBefore(){
+        var data = document.getElementById('mydata').value;
+        var element  = document.getElementById('mylist');
+        var li = document.createElement('li');
+        var text = document.createTextNode(data);
+        li.appendChild(text);
+        element.insertBefore(li,element.childNodes[0]);
+        }
+
+        function addAfter(){
+            var data  = document.getElementById('mydata').value;
+            var element = document.getElementById('mylist');
+            var li = document.createElement('li');
+        var text = document.createTextNode(data);
+        li.appendChild(text);
+        //element.append(li);
+        element.insertBefore(li,element.childNodes[0].nextSibling.nextSibling);
+        }
+        function remove(){
+            var element = document.getElementById('mylist');
+            element.removeChild(element.childNodes[0]);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id='mydata'>
+	<ul id='mylist'>
+		<li>audi</li>
+        <li>bmw</li>
+        <li>mercedes</li>
+
+	</ul>
+	<input type="button" onclick="addBefore()" value="Add Before">
+	<input type="button" onclick="addAfter()" value="Add After">
+	<input type="button" onclick="remove()" value="Remove">
+    
+</body>
+</html>

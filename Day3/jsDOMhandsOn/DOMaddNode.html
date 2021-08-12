@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function addPara(){
+        var body = document.getElementsByTagName('div')
+         var para = document.createElement('p');
+         var textNode = document.createTextNode("Paragraph Text")
+         para.appendChild(textNode); 
+         body[0].appendChild(para);
+    }
+    </script>
+</head>
+<body>
+    <input type = 'button' value = 'Add para' onclick="addPara()">
+    <div style ="background-color: pink;width: 100px;height:100px">
+    <p is = 'mypara'>This is a sub paragraph</p>
+    </div>
+</body>
+</html>

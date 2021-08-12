@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //  function login(){
+    //      // We have to give name attribute
+    //     var data = document.forms['userForm'];
+    //     var username = data['Username'].value;
+    //     var password = data['password'].value;
+    //     alert(username + " " +password);
+    //  }
+     
+     // forms access using id
+     function login(){
+
+         var form = document.getElementById('myForm');
+         var validation = form.noValidate;
+        //  alert(validation)
+        //  form.noValidate = true;
+        //  alert(validation)
+
+        if(form.noValidate){
+           form.submit();
+        }else{
+            form.reset();
+        }
+
+        //  form.action = "https://www.google.com/"
+        //  form.method ='POST';
+        //  alert(form.method);
+        //  form.submit();
+     }
+
+    </script>
+</head>
+<body>
+    <form method ='POST' action="#" name = 'userForm' id = 'myForm'>
+        Enter username <input type = 'text' name = 'Username'><br>
+        Enter password <input type = 'password' name = 'password'><br>
+        <input type = 'button' value="login" onclick="login()">
+    </form>
+</body>
+</html>

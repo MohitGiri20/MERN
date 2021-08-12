@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: pink;
+            width: 100px;
+            height:100px;
+        }
+
+        .newbox{
+            background-color: yellow;
+            width:200px;
+            height:150px;
+        }
+    </style>
+    <script>
+        function changeStyle(){
+            var data = document.getElementById('mydiv');
+            // data.style.backgroundColor = "red";
+            // data.style.borderStyle = "solid";
+              data.className += ' newbox'
+
+        }
+    </script>
+</head>
+<body>
+    <div id = 'mydiv' onclick="changeStyle()" class="box">
+    Inside div
+    </div>
+</body>
+</html>

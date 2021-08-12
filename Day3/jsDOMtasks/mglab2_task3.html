@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getElementId(){
+           
+            var sub =document.getElementsByTagName('div')[0].children[1].children[1].innerHTML 
+           alert(sub);
+        }
+    </script>
+</head>
+<body>
+    <div onclick="getElementId()">
+        <div>
+            First Child
+        </div>
+        <div>
+            second Child
+            <div>
+                first sub element
+            </div>
+            <div>
+                second sub element
+            </div>
+        </div>
+    </div>
+</body>
+</html>

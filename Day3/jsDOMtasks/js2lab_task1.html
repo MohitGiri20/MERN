@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+        function getElementTag(){
+           
+           var elements = document.getElementsByTagName('div');
+           var children = elements[0].getElementsByTagName('div');
+           for(i=0;i<children.length;i++){
+            children[i].innerHTML = 'child' + i+ 'changed'
+
+           }
+
+           //elements[0].innerHTML = 'div changed'
+           //elements[1].innerHTML = 'div 2 changed'
+        }
+
+        function getElementClass(){
+           var data = document.getElementsByClassName('text');
+           data[0].innerHTML = 'changed using class';
+           
+        }
+   </script>
+</head>
+<body>
+    <div onclick="getElementTag()">
+        My div
+        <div >
+            My child 1
+            
+        </div>
+        <div >
+            My child 2
+            
+        </div>
+        <div >
+            My child 3
+            
+        </div>
+    </div>
+    <div >
+        My div 2
+        
+    </div>
+    <p class = 'text' onclick="getElementClass()">Text for class</p>
+</body>
+</html>

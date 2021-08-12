@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        var validation = true;
+
+         function register(){
+         // We have to give name attribute
+        var data = document.forms['userForm'];
+        var username = data['Username'].value;
+        var password = data['password'].value;
+        var email = data['email'].value;
+        var pat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         
+        if(validation ==true){
+
+        if(email.match(pat)==null){
+          alert("Please enter valid email format");
+        }
+
+
+        if(username.length == 0){
+            alert("Username cannot be blank");
+        }
+        else if(username.length != 5){
+            alert("Username Length should be equal to 5");
+        } 
+        if(password.length == 0){
+            alert("Password cannot be blank");
+        }
+        else if(password.length != 7){
+            alert("Password Length should be equal to 7");
+        } 
+        
+        else {
+            alert("Successful Registration");
+        }
+    }else{
+        alert("Validation Off, Successful Registration");
+    }
+     }
+
+     function validate(){
+         validation = false;
+         alert("Validation is off");
+     }
+</script>
+
+</head>
+<body>
+    <h1><em>Registration Form</em></h1>
+    <form method ='POST' action="#" name = 'userForm'>
+        Enter username <input type = 'text' name = 'Username'><br>
+        Enter email <input type = 'email' name = 'email'><br>
+        Enter password <input type = 'password' name = 'password'><br>
+        <input type = 'button' value="register" onclick="register()">
+        <input type = 'button' value = "validate off" onclick="validate()">
+    </form>
+</body>
+</html>
