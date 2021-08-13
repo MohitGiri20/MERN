@@ -1,0 +1,9 @@
+Navigator object
+This contains all the information about browser
+
+geolocation
+platform
+appVersion
+appName
+
+

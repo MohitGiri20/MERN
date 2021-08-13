@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        function setCookies(){
+            dt =new Date();
+            //document.write(dt);
+            document.cookie = "username = Mohit expires" +=dt
+            document.write(document.cookie);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>
+        Hello from Cookie
+    </h1>
+
+    <input type="button" value='create cookie' onclick="setCookies()">
+</body>
+</html>

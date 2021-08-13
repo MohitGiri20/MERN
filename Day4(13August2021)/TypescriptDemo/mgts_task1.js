@@ -1,0 +1,15 @@
+var r;
+r = 7.5;
+console.log(3.14 * r * r);
+var sq;
+sq = 5;
+console.log(sq * sq);
+var si;
+var p;
+var r;
+var t;
+p = 40000;
+r = 10;
+t = 5;
+si = (p * r * t) / 100;
+console.log(si);
