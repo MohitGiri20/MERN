@@ -1,5 +1,0 @@
-Node.js
-
-It is a javascript environment for executing code outside browser.
-Provides support for javascript based libraries and frameworks
-can be used as a testing and development environment 
