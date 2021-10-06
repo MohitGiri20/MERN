@@ -1,0 +1,18 @@
+JWT -> Jason Web Token
+-> are open, industry standards RFC 7519 for representing claims securely
+between parties
+
+Authentication and Authroization
+After authentication used is provided with a secret key thay can be 
+further encrypted.
+
+Benefit 
+-> The process of Authentication and Authroziation can be reduced to single sign industry
+-> Information exchange can be secure,because JWT can be signed.
+
+
+Three parts
+->Header
+->Payload
+->Signature
+

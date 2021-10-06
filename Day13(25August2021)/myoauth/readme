@@ -1,0 +1,15 @@
+Please find all the mongodb uri's , clientIds ,etc in keys.js file
+
+The views folder contains all the html pages
+
+models doc contains the mongodb user information
+
+The accessToken is displayed on the terminal
+
+Main file to run : app.js
+
+Changes to be made
+
+1. Add mongodb  database URI.
+2. You can change the client credentials and generate a new secret
+ key if you want using google console  developer settings. (Optional)

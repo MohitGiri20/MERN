@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //     function sendDataAgain()
+    //         {​​ alert("Check")
+    //     //document.getElementById("myform").submit()
+    //   // createList()
+    //         }​​​
+       
+           
+                var xhttp = new XMLHttpRequest()
+                if(xhttp){
+                    xhttp.onload=function(){
+                        var prods = JSON.parse(xhttp.responseText);
+                        console.log(prods)
+                        for(let i=0;i<prods.length;i++){
+                            itemname=prods[i].itemname
+                            price=prods[i].price
+
+                            document.getElementById('ajaxdata').innerHTML+='<li>'+itemname+'  '+price+'</li>'
+                        }
+                        
+                    }
+                    xhttp.open('GET','/showproducts')
+                    xhttp.send()
+
+                }
+            
+        
+    var xhttp=new XMLHttpRequest()
+        xhttp.open('GET','http://localhost:8087/showproducts')
+        xhttp.onload = function(){
+            var mydata = JSON.parse(xhttp.responseText)
+            //console.log(mydata[0])
+            formList(mydata);
+        }
+        xhttp.send()
+
+    </script>
+</head>
+<body>
+    <form method ="POST" action = "/" id="myform">
+        Enter product name
+        <input type = 'text' name ='itemname'/>
+        Enter product price
+        <input type = 'number' name ='price'/>
+        Enter product quantity
+        <input type = 'number' name ='qty'/>
+        <input type = "submit" value="send" />
+    </form>
+    <div id="ajaxdata">
+</body>
+</html>

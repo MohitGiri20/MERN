@@ -1,0 +1,24 @@
+Kafka commands using cmd
+
+start zookeeper from C:\kafka_2.13-2.8.0\bin\windows>
+by using command ->
+zookeeper-server-start ../../config/zookeeper.properties
+
+Now start kafka server from another command prompt in the same directory as mentioned above
+kafka-server-start ../../config/server.properties
+
+now for creating topic open another cmd in same directory
+
+kafka-topics --create --topic mymessage-service --bootstrap-server localhost:9092
+Here mymessage-service is topic name
+
+// checks topic details
+kafka-topics --describe --topic mymessage-service --bootstrap-server localhost:9092
+
+Now in the same directory run the producer and consumer in two different cmds
+->kafka-console-producer --topic mymessage-service --bootstrap-server localhost:9092
+Now write messages and observe the changes in consumer cmd
+
+
+//For consumer cmd
+kafka-console-consumer --topic mymessage-service --bootstrap-server localhost:9092 

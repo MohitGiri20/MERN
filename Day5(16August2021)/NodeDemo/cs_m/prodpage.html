@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <script>
+            function addp(){
+                var xhttp=new XMLHttpRequest()
+                
+                    product_name=document.getElementById('pname').value,
+                    price=document.getElementById('pr').value,
+                    quantity=document.getElementById('qty').value
+
+                if(xhttp){
+                    xhttp.onload=function(){
+                        document.getElementById('add_res').innerHTML=xhttp.responseText
+
+                    }
+                    xhttp.open('POST','http://localhost:5000/add')
+                    xhttp.send(product_name+'&'+price+'&'+quantity)
+                }
+            }
+            function delp(){
+                var xhttp=new XMLHttpRequest()
+                
+                    product_name=document.getElementById('pname_del').value
+
+                if(xhttp){
+                    xhttp.onload=function(){
+                        document.getElementById('add_res').innerHTML=xhttp.responseText
+
+                    }
+                    xhttp.open('DELETE','http://localhost:5000/del')
+                    xhttp.send(product_name)
+                }
+            }
+            function updp(){
+                var xhttp=new XMLHttpRequest()
+                
+                    product_name=document.getElementById('pname_upd').value
+                    price=document.getElementById('pr_upd').value
+
+                if(xhttp){
+                    xhttp.onload=function(){
+                        document.getElementById('add_res').innerHTML=xhttp.responseText
+
+                    }
+                    xhttp.open('PATCH','http://localhost:5000/updtpr')
+                    xhttp.send(product_name+'&'+price)
+                }
+            }
+            function srch(){
+                var xhttp=new XMLHttpRequest()
+                
+                    product_name=document.getElementById('pname_sr').value
+
+                if(xhttp){
+                    xhttp.onload=function(){
+                        document.getElementById('add_res').innerHTML=xhttp.responseText
+
+                    }
+                    xhttp.open('POST','http://localhost:5000/search')
+                    xhttp.send(product_name)
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form method='POST' action="/formreq" id="form">
+            Enter Product Name:
+            <input type="text" id="pname" name="pname">
+            <br>
+            Enter Product Price:
+            <input type="text" id='pr' name="pr">
+            <br>
+            Enter Product Quantity:
+            <input type="number" id="qty" name="qty">
+            <br>
+            <input type="button" value="Add" onclick="addp()">
+            <br>
+            <br>
+            Enter Prod name to delete:
+            <input type="text" id="pname_del">
+            <br>
+            <input type="button" value="Delete" onclick="delp()">
+            <br>
+            <br>
+            Enter Prod name to Update:
+            <input type="text" id="pname_upd">
+            <br>
+            Enter Updated Price:
+            <input type="text" id="pr_upd">
+            <br>
+            <input type="button" value="Update" onclick="updp()">
+            <br>
+            Enter Product name to search:
+            <input type="text" id="pname_sr" onkeyup="srch()">
+            <br>
+            <p id="add_res"></p>
+        </form>
+    </body>
+</html>

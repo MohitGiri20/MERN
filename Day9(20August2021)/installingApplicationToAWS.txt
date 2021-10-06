@@ -1,0 +1,11 @@
+Installing application to aws
+
+1. Through docker
+2. Through VS Code using AWS Extensions
+3. Through Elastic BeanStalk
+
+Creating a micro service
+
+
+
+

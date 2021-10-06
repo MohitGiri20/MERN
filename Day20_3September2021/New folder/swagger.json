@@ -1,0 +1,83 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0", 
+      "title": "My blog project",
+      "description": "My Blog Project API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:5050",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "blog",
+        "description": "API for blog in the system"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/addblog":{
+            "post":{
+                "tags":["blogs"],
+                "summary":"Add blog",
+                 "description":"add a blog",
+                "parameters":[{
+                    "name":"blog",
+                    "in":"body",
+                    "description":"add a blog",
+                    "schema":{
+                        "$ref":"#/definitions/blog"
+                    }
+                }],
+                "responses":{
+                    "200":{
+                        "description":"blog added",
+                        "schema":{
+                            "$ref":"#/definitions/blog"
+                        },
+                        "produces":["application/json"]
+                        
+                    }
+                }
+            }
+        },
+
+        "/blogs": {
+          "get": {
+            "tags": ["blogs"],
+            "summary": "Get all blogs in system",
+            "responses": {
+              "200": {
+                "description": "OK",
+                "schema": {
+                  "$ref": "#/definitions/blogs"
+                }
+              }
+            }
+          }
+        }
+      },
+      "definitions": {
+        "blog": {
+          "required": ["blogtitle","blogcontent"],
+          "properties":{
+              "blogtitle":{
+                  "type":"string"
+              },
+              "blogcontent":{
+                  "type":"string"
+              }
+          }
+        },
+        "blogs": {
+          "type": "array",
+          "$ref": "#/definitions/blog"
+        }
+      }
+  }
+  

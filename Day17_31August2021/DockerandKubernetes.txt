@@ -1,0 +1,17 @@
+docker check command
+docker run docker/whalesay cowsay Moo
+
+
+
+Kubernetes Link
+
+https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+
+
+Docker commands
+docker build -t myimage .
+docker run myimage
+docker login
+docker tag myimage mohitgiri/sampledocker:mynodetag
+docker push mohitgiri/sampledocker:mynodetag
+

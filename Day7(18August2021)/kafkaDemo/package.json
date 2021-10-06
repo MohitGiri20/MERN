@@ -1,0 +1,14 @@
+{
+  "name": "kafkademo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kafkaDemo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohit Giri",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^1.15.0"
+  }
+}

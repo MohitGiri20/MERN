@@ -1,0 +1,47 @@
+npm list
+npm list -g
+npm install prompt-sync
+npm uninstall prompt-sync
+npm update prompt-sync
+npm install -g npm@latest
+npm run -> To run scripts
+node start
+
+
+
+REST API -> Representational State Transfer
+(JSON data)->complete data
+Architecture format sending and receving data in JSON form
+It is architectural style for distributed hypermedia systems
+
+-> Client Server based architecture
+-> Stateless
+-> Unfiorm Interface
+Operations on RESTful API
+->GET : View list of records
+->Create : To create a new record
+->Update : Update existing records
+->Delete
+
+
+HTTP methods
+
+GET : send data through url 
+POST : through text box
+PUT :
+DELETE :
+PATCH : 
+
+
+Modes in File System
+
+r
+w
+a
+r+
+a+
+rw+
+ax : opens file for appending,fails if the file exists
+ax+: opens file for reading and appending, fails if the file exists 
+wx+: opens file for reading and writing, fails if the file exists
+
